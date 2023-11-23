@@ -14,7 +14,11 @@ const LoginScreen = ({navigation}) => {
  };
 
  const handleSubmit = () => {
-    navigation.navigate("StudentHomeScreen")
+   if(cpf === '1'){
+      navigation.navigate("StudentHomeScreen")
+   }else{
+      navigation.navigate("TeacherHomeScreen")
+   }
  };
 
  return (
