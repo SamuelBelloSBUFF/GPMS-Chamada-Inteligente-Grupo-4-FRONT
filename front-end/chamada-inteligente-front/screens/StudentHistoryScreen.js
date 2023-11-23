@@ -8,7 +8,7 @@ const StudentHistoryScreen = () => {
   ];
 
   return (
-    <View style={{ flex: 1, backgroundColor: 'darkblue' }}>
+    <View style={{ flex: 1, backgroundColor: 'gray', }}>
       <Text style={{ color: 'white' }}>Fulano Sobrenome</Text>
       <Text style={{ color: 'white' }}>MATRÍCULA</Text>
 
