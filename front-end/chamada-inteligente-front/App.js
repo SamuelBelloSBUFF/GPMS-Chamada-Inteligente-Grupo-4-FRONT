@@ -7,9 +7,12 @@ import { useLoadedAssets } from "./hooks/useLoadedAssets";
 import { useColorScheme } from "react-native";
 import AppNavigation from "./navigation/AppNavigation";
 
+import * as Location from 'expo-location';
+
 export default function App() {
   const isLoadingComplete = useLoadedAssets();
   const colorScheme = useColorScheme();
+  let location = Location.requestForegroundPermissionsAsync();
 
   if (!isLoadingComplete) {
     return null;
