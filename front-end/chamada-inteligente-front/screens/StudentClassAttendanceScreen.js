@@ -1,13 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 
-const handleAttendance = () => {
-  navigator.geolocation.getCurrentPosition((position) => {
-    console.log(position);
-    console.log(position.coords.altitude);
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
-  })
+import * as Location from 'expo-location';
+ 
+const handleAttendance = async () => {
+  let location = await Location.getCurrentPositionAsync({});
+  console.log(location)
 };
 
 const Card = ({ date, name, onPress }) => (

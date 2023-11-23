@@ -24,7 +24,7 @@ const App = () => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00008B',
+    backgroundColor: 'gray',
     padding: 10,
   },
   header: {
