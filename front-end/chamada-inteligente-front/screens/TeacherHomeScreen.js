@@ -10,7 +10,7 @@ const TeacherHomeScreen = ({navigation}) => {
         <Text style={styles.subtitle}>Professor</Text>
       </View>
       <Button title="TURMAS" onPress={() => {navigation.navigate("TeacherClassroomsScreen")}} />
-      <Button title="HISTÓRICO" onPress={() => {navigation.navigate("TeacherHistoryScreen")}} />
+      <Button title="AGENDAR" onPress={() => {navigation.navigate("TeacherScheduleAttendanceScreen")}} />
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Aulas do dia</Text>
         <Text style={styles.classInfo}>TCC00363 - GERÊNCIA DE PROJETOS</Text>

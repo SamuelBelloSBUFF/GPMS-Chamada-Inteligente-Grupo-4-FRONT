@@ -13,7 +13,7 @@ const StudentHistoryScreen = () => {
       <Text style={{ color: 'white' }}>MATRÍCULA</Text>
 
       {classes.map((classItem, index) => (
-        <View key={index} style={{ backgroundColor: 'blue', margin: 10, padding: 10 }}>
+        <View key={index} style={{ backgroundColor: 'gray', margin: 10, padding: 10 }}>
           <Text style={{ color: 'white' }}>{classItem.code}</Text>
           <Text style={{ color: 'white' }}>{classItem.name}</Text>
           <Text style={{ color: 'white' }}>{classItem.day}</Text>

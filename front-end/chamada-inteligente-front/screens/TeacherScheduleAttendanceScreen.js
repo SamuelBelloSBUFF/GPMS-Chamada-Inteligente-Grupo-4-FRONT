@@ -5,7 +5,7 @@ const Card = ({ title, schedule, navigation }) => (
   <View style={styles.card}>
     <Text style={styles.cardTitle}>{title}</Text>
     <Text style={styles.cardSchedule}>{schedule}</Text>
-    <Text style={styles.cardHyperlink} onPress={() => {navigation.navigate("TeacherClassStudentsScreen")}}>Ver Turma</Text>
+    <Text style={styles.cardHyperlink} onPress={() => {}}>Agendar</Text>
   </View>
 );
 
@@ -34,7 +34,7 @@ const App = ({ navigation }) => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00008B',
+    backgroundColor: 'gray',
     padding: 10,
   },
   header: {
