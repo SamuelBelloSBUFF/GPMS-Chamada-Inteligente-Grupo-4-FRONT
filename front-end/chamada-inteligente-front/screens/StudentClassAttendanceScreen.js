@@ -2,10 +2,35 @@ import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 
 import * as Location from 'expo-location';
+
+import Toast from 'react-native-root-toast';
  
 const handleAttendance = async () => {
   let location = await Location.getCurrentPositionAsync({});
   console.log(location)
+  let toast = Toast.show('Presença Marcada', {
+    duration: Toast.durations.LONG,
+    position: Toast.positions.BOTTOM,
+    backgroundColor: 'green',
+    shadow: true,
+    animation: true,
+    hideOnPress: true,
+    delay: 0,
+    onShow: () => {
+        // calls on toast\`s appear animation start
+    },
+    onShown: () => {
+        // calls on toast\`s appear animation end.
+    },
+    onHide: () => {
+        // calls on toast\`s hide animation start.
+    },
+    onHidden: () => {
+        // calls on toast\`s hide animation end.
+    }
+});
+
+  
 };
 
 const Card = ({ date, name, onPress }) => (

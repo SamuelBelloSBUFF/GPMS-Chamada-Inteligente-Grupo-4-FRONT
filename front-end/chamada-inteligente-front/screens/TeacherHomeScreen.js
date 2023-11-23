@@ -1,6 +1,36 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
+import * as Location from 'expo-location';
+
+import Toast from 'react-native-root-toast';
+
+const handleAttendance = async () => {
+  let location = await Location.getCurrentPositionAsync({});
+  console.log(location)
+  let toast = Toast.show('Chamada Iniciada', {
+    duration: Toast.durations.LONG,
+    position: Toast.positions.BOTTOM,
+    backgroundColor: 'green',
+    shadow: true,
+    animation: true,
+    hideOnPress: true,
+    delay: 0,
+    onShow: () => {
+        // calls on toast\`s appear animation start
+    },
+    onShown: () => {
+        // calls on toast\`s appear animation end.
+    },
+    onHide: () => {
+        // calls on toast\`s hide animation start.
+    },
+    onHidden: () => {
+        // calls on toast\`s hide animation end.
+    }
+});
+}
+ 
 const TeacherHomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
@@ -16,7 +46,7 @@ const TeacherHomeScreen = ({navigation}) => {
         <Text style={styles.classInfo}>TCC00363 - GERÊNCIA DE PROJETOS</Text>
         <Text style={styles.classInfo}>MANUTENÇÃO DE SOFTWARE AI</Text>
         <Text style={styles.classInfo}>Horário programado: 18:00 - 20:00</Text>
-        <Button title="Iniciar chamada" onPress={() => console.log('Iniciar chamada')} />
+        <Button title="Iniciar chamada" onPress={() => handleAttendance()} />
       </View>
       <Text style={styles.footer}>© TODOS OS DIREITOS RESERVADOS</Text>
     </View>
